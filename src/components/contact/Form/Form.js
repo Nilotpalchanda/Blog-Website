@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Aux from '../../../hoc/_Aux'
 import axios from'axios'
-
+import { ToastContainer, toast } from 'react-toastify';
 class Form extends Component {
 
     state={
@@ -19,6 +19,7 @@ class Form extends Component {
         }
         axios.post('https://jsonplaceholder.typicode.com/posts',data).then(response =>{
             console.log(response)
+            toast("Your Message Succefully Send. Please Check Console!!!");
         })
     }
 
@@ -56,7 +57,7 @@ class Form extends Component {
                     </div>
                     <div id="success"></div>
                     <button type="submit" onClick={this.SendInfo} className="btn btn-primary" id="sendMessageButton">Send Message</button>
-
+                    <ToastContainer />
                 </div>
 
             </div>

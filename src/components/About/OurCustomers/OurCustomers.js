@@ -5,25 +5,25 @@ class OurCustomer extends Component {
    state={
      TeamMembers:[
        {
-         "Name":"Team Member",
-         "Position": "Position",
-         "Photo" : "http://placehold.it/750x450",
-         "Bio":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.",
-         "Email":"name@example.com"
+         "Name":"Facebook",
+         "Position": "Founder",
+         "Photo" : "https://secure.meetupstatic.com/photos/event/6/0/0/4/600_465804580.jpeg",
+         "Bio":"The working principles of React Native are basically the same as ReactJS except that it's not manipulating the DOM via the VirtualDom but some native views.",
+         "Email":"Facebook.com"
        },
        {
-        "Name":"Team Member",
-        "Position": "Position",
-        "Photo" : "http://placehold.it/750x450",
-        "Bio":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.",
-        "Email":"name@example.com"
+        "Name":"Ryan Dahl",
+        "Position": "Founder",
+        "Photo" : "https://www.mappingthejourney.com/wp-content/uploads/2017/08/image.jpg",
+        "Bio":"Ryan Dahl, the hacker who brought the world Node.js, is turning over the reins to Joyent's Isaac Schlueter. Dahl, who started working on the Node project in 2009.",
+        "Email":"Nodejs.org"
       },
       {
-        "Name":"Team Member",
-        "Position": "Position",
-        "Photo" : "http://placehold.it/750x450",
-        "Bio":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.",
-        "Email":"name@example.com"
+        "Name":"Amazon Web Services",
+        "Position": "AWS",
+        "Photo" : "https://yt3.ggpht.com/a-/AJLlDp3AN_FRnPIImoadrgiM7Q9ANlcQPIE5VeO6wA=s900-mo-c-c0xffffffff-rj-k-no",
+        "Bio":"Amazon Web Services (AWS) is a subsidiary of Amazon.com that provides on-demand cloud computing platforms to individuals, companies and governments, on a paid subscription basis.",
+        "Email":"Amazon.com"
       }
      ]
    }

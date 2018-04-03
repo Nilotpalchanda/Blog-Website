@@ -6,7 +6,7 @@ class AboutModernBusiness extends Component {
             <Aux>
                 <div className="row">
                     <div className="col-lg-6">
-                        <img className="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt=""/>
+                        <img className="img-fluid rounded mb-4" src="https://3.imimg.com/data3/OF/DO/MY-15309375/web-development-500x500.png" alt=""/>
                     </div>
                     <div className="col-lg-6">
                         <h2>About Modern Business</h2>

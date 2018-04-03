@@ -2,40 +2,42 @@ import React, {Component}  from 'react';
 import '../../App.css'
 import PageStr from '../PageStr'
 import Slider from './Slider/Slider'
+import axios from 'axios'
 import ModernBusinessFeatures from './ModernBusinessFeatures/ModernBusinessFeatures';
 import CallToAction from './CallToAction/CallToAction';
 import PortfolioHeading from './PortfolioHeading/PortfolioHeading';
 import MorderBusiness from './ModernBusiness/ModernBusiness'
 
 class Home extends Component {
-      state = {
-          cards:[
-            {
-                "userId": 1,
-                "id": 1,
-                "title": "qui est esse",
-                "content": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-              },
-              {
-                "userId": 2,
-                "id": 2,
-                "title": "qui est esse",
-                "content": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-              },
-              {
-                "userId": 3,
-                "id": 3,
-                "title": "qui est esse",
-                "content": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-              }
-          ]
-      }    
-    render(){
-        const ModernB = this.state.cards.map(card =>{
-                return <MorderBusiness key={card.id} title = {card.title} content= {card.content}  />
+
+    state={
+        posts:[]
+    }
+
+    componentDidMount(){
+        axios.get('/posts').then(response=>{
+            console.log(response)
+            const data = response.data.slice(0,3)
+            console.log(data)
+            const some = data.map(datas=>{
+                return {
+                    ...datas
+                }
+
+            })
+            this.setState({
+                posts: some
+            })
         })
-        const PortfolioHead = this.state.cards.map(card =>{
-            return <PortfolioHeading key={card.id} title = {card.title} content= {card.content}  />
+    }
+
+
+    render(){
+        const ModernB = this.state.posts.map(card =>{
+                return <MorderBusiness key={card.id} title = {card.title} content= {card.body}  />
+        })
+        const PortfolioHead = this.state.posts.map(card =>{
+            return <PortfolioHeading key={card.id} title = {card.title} content= {card.body}  />
          })
         return(
             <PageStr>

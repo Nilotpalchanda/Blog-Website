@@ -1,6 +1,7 @@
 import React  from 'react';
 import Aux from '../../../hoc/_Aux'
-import { NavLink } from 'react-router-dom';
+
+
 
 const ServicePostStyle =(props) =>(
             <Aux>
@@ -11,7 +12,7 @@ const ServicePostStyle =(props) =>(
                         <p className="card-text"> {props.description} </p>
                         </div>
                         <div className="card-footer">
-                        <NavLink to="/" className="btn btn-primary">Learn More</NavLink>
+                        <button onClick={props.clicked} className="btn btn-primary">Learn More</button>
                         </div>
                     </div>
                 </div>
