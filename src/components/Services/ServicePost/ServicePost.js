@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Aux from '../../../hoc/_Aux'
 import ServicePostStyle from './ServicePostStyle'
 import axios from 'axios'
+import FullPost from './FullPost/FullPost'
 class ServicePost extends Component {
 
     state={
@@ -10,6 +11,8 @@ class ServicePost extends Component {
     }
 
     componentDidMount(){
+
+
         axios.get('/posts').then(response=>{
             const serpost = response.data.slice(0,3)
             const serviceposts = serpost.map(posts=>{
@@ -17,6 +20,10 @@ class ServicePost extends Component {
                         ...posts
                 }
             })
+
+
+        
+
             this.setState({
                 ServicePost:serviceposts
             })
@@ -25,7 +32,7 @@ class ServicePost extends Component {
     divclicked=(id)=>{
         this.setState({selectDiv:id})
         console.log(id)
-        //window.location.assign('/app'+ id)
+        //window.location.assign('/services/'+ id)
     }
 
     render(){
@@ -37,12 +44,13 @@ class ServicePost extends Component {
             clicked={()=>this.divclicked(Servicepost.id)}
             />
         })
-
-
         return(
             <Aux>
              <div className="row">
                         {ServPost}
+                </div>
+                <div className="row FullPost">
+                       <FullPost id ={this.state.selectDiv}/>
                 </div>
             </Aux>
         )

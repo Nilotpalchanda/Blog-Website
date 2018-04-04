@@ -11,19 +11,19 @@ class Slider extends Component {
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
               </ol>
               <div className="carousel-inner" role="listbox">
-                <div className="carousel-item active image">
+                <div className="carousel-item active image0">
                   <div className="carousel-caption d-none d-md-block">
                     <h3>First Slide</h3>
                     <p>This is a description for the first slide.</p>
                   </div>
                 </div>
-                <div className="carousel-item image">
+                <div className="carousel-item image1">
                   <div className="carousel-caption d-none d-md-block">
                     <h3>Second Slide</h3>
                     <p>This is a description for the second slide.</p>
                   </div>
                 </div>
-                <div className="carousel-item image">
+                <div className="carousel-item image2">
                   <div className="carousel-caption d-none d-md-block">
                     <h3>Third Slide</h3>
                     <p>This is a description for the third slide.</p>

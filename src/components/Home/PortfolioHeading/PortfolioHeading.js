@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
                         <NavLink to="/"><img className="card-img-top" src="http://placehold.it/700x400" alt=""/></NavLink>
                         <div className="card-body">
                             <h4 className="card-title">
-                            <a href="/">{props.title}</a>
+                            <NavLink to="/">{props.title}</NavLink>
                             </h4>
                             <p className="card-text">{props.content}</p>
                         </div>

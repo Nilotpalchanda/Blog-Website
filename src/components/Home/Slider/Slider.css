@@ -1,3 +1,9 @@
-.image{
-    background-image: url('http://placehold.it/1900x1080');
+.image0{
+    background-image: url('https://www.e-kern.com/fileadmin/user_upload/Images_Allgemein/branchen-images/branchen-uebersicht/kern_it_85103537_1920x1080px.jpg');
+}
+.image1{
+    background-image: url('http://futurestudents.csu.edu.au/__data/assets/image/0005/2869745/M_Management_IT_Banner_01.jpg');
+}
+.image2{
+    background-image: url('https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_2.0/c_limit,w_740/fl_lossy,q_auto/v1492193957/articles/2014/11/09/how-the-nsa-sorta-won-the-last-iraq-war/141108-harris-nsa-war-tease_ixgcso');
 }

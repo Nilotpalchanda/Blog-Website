@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Aux from '../../../hoc/_Aux'
 import axios from'axios'
+import './Form.css'
 import { ToastContainer, toast } from 'react-toastify';
 class Form extends Component {
 
@@ -19,7 +20,9 @@ class Form extends Component {
         }
         axios.post('https://jsonplaceholder.typicode.com/posts',data).then(response =>{
             console.log(response)
-            toast("Your Message Succefully Send. Please Check Console!!!");
+            //console.log(data.fullname)
+            const name = data.fullname
+            toast(<div><span className="FormFullName">{name}</span> Your Meassage Successfully Send. For conformation please Check Console</div>);
         })
     }
 
@@ -45,8 +48,8 @@ class Form extends Component {
                     </div>
                     <div className="control-group form-group">
                     <div className="controls">
-                        <label>Email Address:</label>
-                        <input type="email" value={this.state.email} onChange={(event)=>this.setState({email:(event.target.value)})}  className="form-control" id="email" required data-validation-required-message="Please enter your email address."/>
+                        <label for="inputEmail4">Email Address:</label>
+                        <input type="email"  aria-describedby="emailHelp" value={this.state.email} onChange={(event)=>this.setState({email:(event.target.value)})}  className="form-control"  id="inputEmail4" required data-validation-required-message="Please enter your email address."/>
                     </div>
                     </div>
                     <div className="control-group form-group">

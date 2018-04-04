@@ -37,7 +37,7 @@ class Home extends Component {
                 return <MorderBusiness key={card.id} title = {card.title} content= {card.body}  />
         })
         const PortfolioHead = this.state.posts.map(card =>{
-            return <PortfolioHeading key={card.id} title = {card.title} content= {card.body}  />
+            return <PortfolioHeading key={card.id}  title = {card.title} content= {card.body}  />
          })
         return(
             <PageStr>

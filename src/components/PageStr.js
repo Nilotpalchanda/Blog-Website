@@ -4,6 +4,7 @@ import Aux from '../hoc/_Aux'
 import Header from './BasicBlock/Header'
 import Footer from './BasicBlock/Footer'
 
+
 const PageStr = (props) =>(
 
 	<Aux>
