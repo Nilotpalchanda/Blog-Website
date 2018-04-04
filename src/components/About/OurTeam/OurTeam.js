@@ -32,7 +32,7 @@ class OurTeam extends Component {
     }
     render(){
         const TeamImg = this.state.TeamImage.map(image =>{
-            return <OurTeamStyle images={image.img} alt={image.alt} />
+            return <OurTeamStyle key={image.alt} images={image.img} alt={image.alt} />
         })
         return(
             <Aux>

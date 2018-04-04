@@ -1,52 +1,43 @@
-import React, {Component} from 'react'
-import Aux from '../../../../hoc/_Aux'
+import React,{Component} from 'react'
 import axios from 'axios'
-class FullPost extends Component  {
+import PageStr from '../../../PageStr'
+import NProgress from 'nprogress'
+import BreadCrums from './breadcrumbs/breadcrumbs'
+class FullPost extends Component{
 
     state= {
-        loadedPost:null
+        loadedPost:[]
     }
-    componentDidUpdate(){
-        if ( this.props.id ) {
-        if(!this.state.loadedPost || (this.state.loadedPost && this.state.loadedPost === this.props.id)){
-        axios.get('/posts/' + this.props.id)
+    componentDidMount(){
+        NProgress.start(0.0);
+        axios.get('/posts/' +  this.props.match.params.id)
         .then(response=>{
           this.setState({loadedPost: response.data})
-          //console.log(response)
+          console.log(response)
+          NProgress.done(1.0);
         })
-        }
-      }
-    
-      }
-
-
-
+    }
 
     render(){
-        //one
-        let post = <p style={{ textAlign: 'center' }}>Please select a Post!</p>;
-        //two
-        if(this.props.id){
-            post = <p style={{ textAlign: 'center' }}>Loading.......</p>;
-    
-        }
-        //three
-        if(this.state.loadedPost){
-            post =(
-                <Aux>
-
-                <div className="col-lg-12 mb-12">
-                    <div className="card h-100">
-                        <h4 className="card-header">{this.state.loadedPost.title}</h4>
-                        <div className="card-body">
-                        <p className="card-text"> {this.state.loadedPost.body} </p>
+        return(
+            <PageStr>
+                
+                   <div className="container" style={{marginTop : "100px"}} >
+                         <BreadCrums/>
+                         <div className="row">
+                            <div className="col-lg-12">
+                                <img className="img-fluid rounded" src="http://placehold.it/900x300" alt=""/>
+                                <hr/>
+                                <p>Posted on January 1, 2017 at 12:00 PM</p>
+                                <hr/>
+                                <h3>{this.state.loadedPost.title}</h3>
+                                <p >{this.state.loadedPost.body}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-               </Aux>
-            )
-        }
-        return post
+           </PageStr>
+
+        )
     }
 }
 

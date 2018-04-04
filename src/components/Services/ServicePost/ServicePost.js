@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Aux from '../../../hoc/_Aux'
 import ServicePostStyle from './ServicePostStyle'
 import axios from 'axios'
-import FullPost from './FullPost/FullPost'
-
+// import FullPost from './FullPost/FullPost'
+// import { Link } from 'react-router-dom'
 class ServicePost extends Component {
 
     state={
@@ -23,7 +23,7 @@ class ServicePost extends Component {
             this.setState({
                 ServicePost:serviceposts
             })
-            console.log(ServicePost)
+            //console.log(ServicePost)
 
         })
     }
@@ -35,20 +35,20 @@ class ServicePost extends Component {
 
     render(){
         const ServPost = this.state.ServicePost.map(Servicepost =>{
-            return <ServicePostStyle 
+
+            return(<ServicePostStyle 
             key={Servicepost.id}  
             title = {Servicepost.title} 
-            description={Servicepost.body} 
-            clicked={()=>this.divclicked(Servicepost.id)}
+            description={Servicepost.body.slice(0,100)}
+            link={'/service/fullpost/' + Servicepost.id} 
+            // clicked={()=>this.divclicked(Servicepost.id)}
             />
+            )
         })
         return(
             <Aux>
              <div className="row">
                         {ServPost}
-                </div>
-                <div className="row FullPost">
-                       <FullPost id ={this.state.selectDiv}/>
                 </div>
             </Aux>
         )

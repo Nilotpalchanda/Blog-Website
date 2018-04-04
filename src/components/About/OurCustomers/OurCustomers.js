@@ -29,7 +29,8 @@ class OurCustomer extends Component {
    }
     render(){
       const Team = this.state.TeamMembers.map(TeamMember=>{
-        return <OurCustomerStyle 
+        return <OurCustomerStyle
+                key={TeamMember.Name}
                 name={TeamMember.Name}
                 position={TeamMember.Position}
                 bio={TeamMember.Bio}
