@@ -7,7 +7,7 @@ import ModernBusinessFeatures from './ModernBusinessFeatures/ModernBusinessFeatu
 import CallToAction from './CallToAction/CallToAction';
 import PortfolioHeading from './PortfolioHeading/PortfolioHeading';
 import MorderBusiness from './ModernBusiness/ModernBusiness'
-
+import NProgress from 'nprogress'
 class Home extends Component {
 
     state={
@@ -17,6 +17,7 @@ class Home extends Component {
     componentDidMount(){
         axios.get('/posts').then(response=>{
             console.log(response)
+            NProgress.start(0.0);
             const data = response.data.slice(0,3)
             console.log(data)
             const some = data.map(datas=>{
@@ -28,6 +29,7 @@ class Home extends Component {
             this.setState({
                 posts: some
             })
+            NProgress.done(1.0);
         })
     }
 

@@ -3,6 +3,7 @@ import Aux from '../../../hoc/_Aux'
 import ServicePostStyle from './ServicePostStyle'
 import axios from 'axios'
 import FullPost from './FullPost/FullPost'
+
 class ServicePost extends Component {
 
     state={
@@ -11,8 +12,6 @@ class ServicePost extends Component {
     }
 
     componentDidMount(){
-
-
         axios.get('/posts').then(response=>{
             const serpost = response.data.slice(0,3)
             const serviceposts = serpost.map(posts=>{
@@ -21,12 +20,11 @@ class ServicePost extends Component {
                 }
             })
 
-
-        
-
             this.setState({
                 ServicePost:serviceposts
             })
+            console.log(ServicePost)
+
         })
     }
     divclicked=(id)=>{
