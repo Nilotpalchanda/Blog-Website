@@ -36,10 +36,10 @@ class Home extends Component {
 
     render(){
         const ModernB = this.state.posts.map(card =>{
-                return <MorderBusiness key={card.id} title = {card.title} content= {card.body}  />
+                return <MorderBusiness key={card.id} link={'/service/fullpost/'+ card.id} title = {card.title} content= {card.body.slice(0,100)}  />
         })
         const PortfolioHead = this.state.posts.map(card =>{
-            return <PortfolioHeading key={card.id}  title = {card.title} content= {card.body}  />
+            return <PortfolioHeading key={card.id} link={'/service/fullpost/'+ card.id} title = {card.title} content= {card.body.slice(0,100)}  />
          })
         return(
             <PageStr>

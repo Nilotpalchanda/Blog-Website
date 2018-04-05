@@ -10,7 +10,7 @@ const MordernBusiness = (props) =>(
                             <p className="card-text">{props.content}</p>
                         </div>
                         <div className="card-footer">
-                            <NavLink to="#" className="btn btn-primary">Learn More</NavLink>
+                            <NavLink to={props.link} className="btn btn-primary">Learn More</NavLink>
                         </div>
                         </div>
                     </div>

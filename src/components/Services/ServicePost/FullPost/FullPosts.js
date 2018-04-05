@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 import axios from 'axios'
 import PageStr from '../../../PageStr'
 import NProgress from 'nprogress'
-import LatestPost from './LatestPost'
 import BreadCrums from './breadcrumbs/breadcrumbs'
 // import { Link } from 'react-router-dom'
 import ImageGallery from './ImageGallery/ImageGallery';
@@ -38,14 +37,10 @@ class FullPost extends Component{
                                 <p >{this.state.loadedPost.body}</p>
                             </div>
                             <div className="col-lg-4">
-                               <h4>Latest Posts</h4>
+                               <h4>Image Gallery</h4>
+
                                <hr/>
-                                <LatestPost/>
-                                <hr/>
-                                <h4>Image Gallery</h4>
-                                <hr/>
-                                <ImageGallery/>
-                                <br/>
+                               <ImageGallery/>
                             </div>
                         </div>
                     </div>

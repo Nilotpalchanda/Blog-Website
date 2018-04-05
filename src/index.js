@@ -9,6 +9,7 @@ import Services from './components/Services/Services'
 import Contact from './components/contact/Contact'
 import registerServiceWorker from './registerServiceWorker';
 import FullPost from './components/Services/ServicePost/FullPost/FullPost'
+import FullPosts from './components/Services/ServicePost/FullPost/FullPosts'
 axios.defaults.baseURL='https://jsonplaceholder.typicode.com'
 
 
@@ -25,6 +26,7 @@ class App extends Component{
 					<Route path="/services" component={Services}/>
 					<Route path="/contact" component={Contact}/>
 					<Route path="/service/fullpost/:id" component={FullPost}/>
+					<Route path="/latestpost/:id" component={FullPosts}/>
 				</Switch>
 			</Router>
 

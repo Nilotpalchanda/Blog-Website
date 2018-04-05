@@ -13,7 +13,7 @@ const Header = () =>(
               <NavLink className="nav-link" to="/" exact activeStyle={{color: 'white'}}>Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="about" activeStyle={{color: 'white'}} >About</NavLink>
+              <NavLink className="nav-link" to="/about" activeStyle={{color: 'white'}} >About</NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/services" activeStyle={{color: 'white'}} >Services</NavLink>
