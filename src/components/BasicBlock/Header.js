@@ -21,6 +21,9 @@ const Header = () =>(
             <li className="nav-item">
               <NavLink className="nav-link" to="/contact" activeStyle={{color: 'white'}} >Contact</NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/shop" activeStyle={{color: 'white'}} >Shop</NavLink>
+            </li>
           </ul>
         </div>
       </div>
