@@ -30,7 +30,7 @@ class App extends Component{
 					<Route path="/service/fullpost/:id" component={FullPost}/>
 					<Route path="/latestpost/:id" component={FullPosts}/>
 					<Route path="/shop" component={Shop}/>
-					<Route path="/product/:id" component={SingleProduct}/>
+					<Route path="/products/:id" component={SingleProduct}/>
 
 				</Switch>
 			</Router>

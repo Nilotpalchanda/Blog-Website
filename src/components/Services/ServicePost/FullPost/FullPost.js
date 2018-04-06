@@ -12,11 +12,12 @@ class FullPost extends Component{
         loadedPost:[]
     }
     componentDidMount(){
+        console.log(this.props)
         NProgress.start(0.0);
         axios.get('/posts/' +  this.props.match.params.id)
         .then(response=>{
           this.setState({loadedPost: response.data})
-          console.log(response)
+          //console.log(response)
           NProgress.done(1.0);
         })
     }
