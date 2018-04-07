@@ -1,6 +1,7 @@
 import React , { Component } from 'react';
 import Aux from '../../../../../hoc/_Aux'
 import RelatedProductStyle from './RelatedProductStyle'
+import axios from 'axios'
 class RelatedProduct extends Component {
 
     state={
@@ -12,12 +13,12 @@ class RelatedProduct extends Component {
         .then(response =>{
             const latestPosts = response.data.slice(0,3)
             const laProduct = latestPosts.map(LaP =>{
-               return(
+               return{
                    ...LaP
-               )
+               }
             })
             this.setState({
-                relatedProduct:Lap
+                relatedProduct:laProduct
             })
         })
     }
@@ -29,8 +30,9 @@ class RelatedProduct extends Component {
                     name={pro.ProductName}
                     image ={pro.image}
                     price ={pro.Price}
-                    details= {pro.Details}
-                    
+                    details= {pro.Details.slice(0,100)}
+                    link={'/relatedproduct/'+ pro.id}
+                    key={pro.id}
                     />
             )
         })
@@ -39,9 +41,9 @@ class RelatedProduct extends Component {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="row">
-                        <div className="col-lg-4 col-md-6 mb-4">
+                        
                             {product}
-                        </div>
+                      
                         </div>
                     </div>
                </div>

@@ -8,6 +8,7 @@ app.get('/products', ((req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "X-Requested-With"); 
     res.sendFile(__dirname + "/" + "product.json")
+    console.log('product endpoint connected')
   }))
 
 app.use(bodyParser.urlencoded({extended : true}));
@@ -24,7 +25,7 @@ app.get('/products/:id',(req,res)=>{
     	}
     	)) )
   })
-
+  console.log('single product endpoint connected')
 })
 
 app.listen(process.env.PORT || 8080, () => {
