@@ -1,14 +1,16 @@
 import React,{Component} from 'react'
-// import Aux from '../../../../hoc/_Aux'
 import {NavLink} from 'react-router-dom'
 import PageStr from './../../../PageStr';
 import BreadCrumbes from './breadcrumbs/breadcrumbs'
 import axios from 'axios'
 import RelatedProduct from './RelatedProduct/RelatedProduct'
+import ProductControl from './ProductControl/ProductControl'
 class SingleProduct extends Component{
 
     state={
-        loadPost:[]
+        loadPost:[],
+        totalPrice:0,
+        Stock:0
     }
 
     componentDidMount(){
@@ -16,10 +18,43 @@ class SingleProduct extends Component{
         axios.get('http://localhost:8080/products/' +  this.props.match.params.id )
             .then(response =>{
                 console.log(response)
-                this.setState({loadPost: response.data})
+                this.setState({
+                    loadPost: response.data, 
+                    totalPrice:response.data.Price,
+                    Stock: response.data.stock
+                })
         })
     }
+    productAdd=()=>{
+        const stock = this.state.loadPost.stock
+        const Stock = this.state.Stock 
+        const newStock = stock + Stock
 
+        const price = this.state.loadPost.Price
+        const pricev = this.state.totalPrice 
+        const newPrice = price + pricev
+        //console.log(newPrice)
+        this.setState({
+            totalPrice:newPrice,
+            Stock:newStock
+        })
+    }
+    productDelete =() =>{
+        const stock = this.state.loadPost.stock
+        const Stock = this.state.Stock 
+        const newStock =  Stock - stock 
+
+        const price = this.state.totalPrice 
+        const pricem = this.state.loadPost.Price
+        const newPrice = price - pricem
+        //console.log(newPrice)
+        if( newStock > 0 ){
+        this.setState({
+            totalPrice:newPrice,
+            Stock:newStock
+        })
+    }
+    }
     render(){
         return(
             <PageStr>
@@ -36,8 +71,14 @@ class SingleProduct extends Component{
                     <hr/>
                     <p>{this.state.loadPost.Details}</p>
                     <hr/>
-                    <h4>Price: <strong>{this.state.loadPost.Price}</strong> </h4>
-                    <NavLink className="btn btn-primary" to='/' >Buy Now</NavLink>
+                    <h4>Quantity: <strong>{this.state.Stock}</strong> </h4>
+                    <h4>Price: $<strong>{this.state.totalPrice.toFixed(2)}</strong> </h4>
+                    <ProductControl
+                    delete={this.productDelete}
+                    added={this.productAdd}
+                    />
+                    <NavLink className="btn btn-primary" to={'/buy/'+ this.state.loadPost.id } ><i className="fa fa-shopping-cart"></i> Buy Now</NavLink>
+                    
                   </div>
                </div>
                <br/>

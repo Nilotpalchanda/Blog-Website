@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 // import Aux from '../../../../hoc/_Aux'
 import {NavLink} from 'react-router-dom'
 import PageStr from './../../../../PageStr';
-
+// import './relatedScript'
 import axios from 'axios'
 
 class RelatedSingle extends Component{
@@ -36,7 +36,7 @@ class RelatedSingle extends Component{
                     <hr/>
                     <p>{this.state.loadPost.Details}</p>
                     <hr/>
-                    <h4>Price: <strong>{this.state.loadPost.Price}</strong> </h4>
+                    <h4>Price: <strong>{this.state.loadPost.Price}</strong> </h4>             
                     <NavLink className="btn btn-primary" to='/' >Buy Now</NavLink>
                   </div>
                </div>

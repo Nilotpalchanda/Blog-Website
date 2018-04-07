@@ -4,6 +4,7 @@
         "image":"http://ksassets.timeincuk.net/wp/uploads/sites/54/2017/11/DSCF9432-920x613.jpg",
         "ProductName": "Iphone X",
         "Price":1149,
+        "stock":1,
         "Details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
@@ -11,6 +12,7 @@
         "image":"https://cnet2.cbsistatic.com/img/qXtNjgDyxHKguoNFyL19bD8Nl0M=/770x433/2017/06/27/89beef22-ceb9-49c1-8f30-cd6c47018ba4/apple-macbook-pro-15-inch-2017-03.jpg",
         "ProductName": "The MacBook Pro",
         "Price":2799,
+        "stock":1,
         "Details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
@@ -18,6 +20,7 @@
         "image":"https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2017/06/105-ipad-pro-review-hero.jpg?itok=M3NE-T4q",
         "ProductName": "iPad",
         "Price":329,
+        "stock":1,
         "Details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
@@ -25,6 +28,7 @@
         "image":"http://placehold.it/700x400",
         "ProductName": "Item One",
         "Price":24.99,
+        "stock":1,
         "Details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
@@ -32,6 +36,7 @@
         "image":"http://placehold.it/700x400",
         "ProductName": "Item One",
         "Price":24.99,
+        "stock":1,
         "Details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     },
     {
@@ -39,6 +44,7 @@
         "image":"http://placehold.it/700x400",
         "ProductName": "Item One",
         "Price":24.99,
+        "stock":1,
         "Details":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!"
     }
 ]
