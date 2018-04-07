@@ -36,7 +36,7 @@ class Shop extends Component{
                 image = {product.image}
                 ProductName = {product.ProductName}
                 Price ={product.Price}
-                Details = {product.Details}
+                Details = {product.Details.slice(0,100)}
                 productId ={product.id}
                 key = {product.id}
                 location= {'/products/'+ product.id }
