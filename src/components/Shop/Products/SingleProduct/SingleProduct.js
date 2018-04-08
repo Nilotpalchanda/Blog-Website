@@ -5,6 +5,7 @@ import BreadCrumbes from './breadcrumbs/breadcrumbs'
 import axios from 'axios'
 import RelatedProduct from './RelatedProduct/RelatedProduct'
 import ProductControl from './ProductControl/ProductControl'
+import NProgress from 'nprogress'
 class SingleProduct extends Component{
 
     state={
@@ -14,8 +15,9 @@ class SingleProduct extends Component{
     }
 
     componentDidMount(){
-        console.log(this.props)
-        axios.get('http://localhost:8080/products/' +  this.props.match.params.id )
+        //console.log(this.props)
+        NProgress.start(0.0);
+        axios.get('https://shopsserver.herokuapp.com/products/' +  this.props.match.params.id )
             .then(response =>{
                 console.log(response)
                 this.setState({
@@ -24,6 +26,7 @@ class SingleProduct extends Component{
                     Stock: response.data.stock
                 })
         })
+        NProgress.done(1.0);
     }
     productAdd=()=>{
         const stock = this.state.loadPost.stock

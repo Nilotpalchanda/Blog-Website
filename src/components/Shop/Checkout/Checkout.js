@@ -4,6 +4,7 @@ import PageStr from '../../PageStr'
 import './Checkout.css'
 import axios from 'axios'
 import {NavLink} from 'react-router-dom'
+import NProgress from 'nprogress'
 class Checkout extends Component {
 
     state={
@@ -14,7 +15,8 @@ class Checkout extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8080/products/' +  this.props.match.params.id)
+		NProgress.start(0.0);
+        axios.get('https://shopsserver.herokuapp.com/products/' +  this.props.match.params.id)
         .then(response=>{
             console.log(response)
             const CheckoutPro = response.data
@@ -25,7 +27,8 @@ class Checkout extends Component {
                 checkoutDetail: checkoutDetails,
                 Checkoutprice:CheckoutPrice
             })
-        })
+		})
+		NProgress.done(1.0);
     }
     hideProduct=()=>{
         this.setState({
@@ -70,7 +73,7 @@ class Checkout extends Component {
 							</td>
 							<td data-th="Price">${this.state.Checkoutprice}</td>
 							<td data-th="Quantity">
-								<input type="number" className="form-control text-center" defaultValue="1"/>
+								<input className="form-control text-center" defaultValue="1"/>
 							</td>
 							<td data-th="Subtotal" className="text-center">${this.state.Checkoutprice}</td>
 							<td className="actions" data-th="">

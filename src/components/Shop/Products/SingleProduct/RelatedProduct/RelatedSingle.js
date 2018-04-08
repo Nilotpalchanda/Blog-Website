@@ -13,7 +13,7 @@ class RelatedSingle extends Component{
 
     componentDidMount(){
         console.log(this.props)
-        axios.get('http://localhost:8080/products/' +  this.props.match.params.id )
+        axios.get('https://shopsserver.herokuapp.com/products' +  this.props.match.params.id )
             .then(response =>{
                 console.log(response)
                 this.setState({loadPost: response.data})

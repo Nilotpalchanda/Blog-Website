@@ -3,13 +3,15 @@ import PageStr from './../PageStr'
 import Products from './Products/Products'
 import BreadCrumbes from './breadcrumbs/breadcrumbs'
 import axios from 'axios'
+import NProgress from 'nprogress'
 class Shop extends Component{
     state = {
         products:[]
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8080/products').then(response =>{
+        NProgress.start(0.0);
+        axios.get('https://shopsserver.herokuapp.com/products').then(response =>{
             console.log(response)
             const Pro = response.data
             const prod = Pro.map(pros=>{
@@ -20,6 +22,7 @@ class Shop extends Component{
             this.setState({
                 products: prod
             })
+            NProgress.done(1.0);
         })
 
 

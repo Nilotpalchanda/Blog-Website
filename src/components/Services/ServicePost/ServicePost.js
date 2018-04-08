@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Aux from '../../../hoc/_Aux'
 import ServicePostStyle from './ServicePostStyle'
 import axios from 'axios'
-// import FullPost from './FullPost/FullPost'
-// import { Link } from 'react-router-dom'
+import NProgress from 'nprogress'
 class ServicePost extends Component {
 
     state={
@@ -12,6 +11,7 @@ class ServicePost extends Component {
     }
 
     componentDidMount(){
+        NProgress.start(0.0);
         axios.get('/posts').then(response=>{
             const serpost = response.data.slice(0,3)
             const serviceposts = serpost.map(posts=>{
@@ -23,6 +23,7 @@ class ServicePost extends Component {
             this.setState({
                 ServicePost:serviceposts
             })
+            NProgress.done(1.0);
             //console.log(ServicePost)
 
         })

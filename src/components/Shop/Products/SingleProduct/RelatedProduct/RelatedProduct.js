@@ -9,7 +9,7 @@ class RelatedProduct extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:8080/products')
+        axios.get('https://shopsserver.herokuapp.com/products')
         .then(response =>{
             const latestPosts = response.data.slice(0,3)
             const laProduct = latestPosts.map(LaP =>{
